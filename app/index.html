@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <title>ToDos List /v1</title>
+  </head>
+  <body>
+    <main>
+      <nav class="navbar">
+        <button class="listAll"><i class="fa-solid fa-list-check"></i></button>
+        <button class="listCompleted disabled"><i class="fa-regular fa-calendar-check"></i></button>
+      </nav>
+
+      <section class="section">
+        <input type="checkbox" class="section-checkbox" id="section-checkbox-1" value="yes" />
+        <label for="section-checkbox-1">Section Call</label>
+        <button class="buttonMore">more</button>
+      </section>
+      <section class="section">
+        <input type="checkbox" class="section-checkbox" id="section-checkbox-2" name="section-checkbox" value="yes" />
+        <label for="section-checkbox-2">Section Call</label>
+        <button class="buttonMore">more</button>
+      </section>
+      <section class="section">
+        <input type="checkbox" class="section-checkbox" id="section-checkbox-3" name="section-checkbox" value="yes" />
+        <label for="section-checkbox-3">Section Call</label>
+        <button class="buttonMore">more</button>
+      </section>
+
+      <button class="createTodoButton">make a task</i></button>
+    </main>
+    <div class="grey-background"></div>
+    <div class="popUp">popUp</div>
+  <script src="./JSfiles/app.js"></script>
+  </body>
+</html>

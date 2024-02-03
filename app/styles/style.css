@@ -1,0 +1,192 @@
+body {
+  display: flex;
+  justify-content: center;
+
+  background: linear-gradient(30deg, rgba(34, 193, 195, 1) 0%, rgba(77, 109, 233, 1) 100%);
+  margin: 0;
+  font-size: 20px;
+  font-family: "Fira Sans", sans-serif;
+  color: #000000;
+
+  max-height: 1500px;
+  height: 100vh;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  margin: auto 0;
+  width: 360px;
+  min-height: 460px;
+  max-height: 720px;
+  background: #fff;
+
+  border-radius: 1rem;
+}
+
+.navbar {
+  display: flex;
+
+  border-radius: 1rem;
+}
+
+.navbar button {
+  border: 0;
+  background: #fff;
+  color: rgba(77, 109, 233, 1);
+  width: 50%;
+  cursor: pointer;
+  height: 50px;
+  font-size: 1.2rem;
+}
+
+.listAll {
+  border-top-left-radius: 1rem;
+}
+
+.listCompleted {
+  border-top-right-radius: 1rem;
+}
+
+.section {
+  display: flex;
+  color: rgb(125, 125, 125);
+  font-size: 16px;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.section:hover .buttonMore {
+  opacity: 1;
+}
+
+.buttonMore {
+  border: 0;
+  background: #fff;
+  color: rgb(150, 150, 150);
+  width: 20%;
+  cursor: pointer;
+  height: 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.15s linear;
+  cursor: pointer;
+}
+
+.section label {
+  width: 74%;
+  cursor: pointer;
+}
+
+.section-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.section-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  text-decoration: 0;
+}
+
+.section-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 5px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid rgb(215, 215, 215);
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.section-checkbox:checked + label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.section-checkbox:checked + label {
+  text-decoration: line-through;
+}
+
+/* стили при наведении курсора на checkbox */
+.section-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #b3d7ff;
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.section-checkbox:not(:disabled):active + label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+.section-checkbox:not(:disabled):active + label {
+  text-decoration: line-through;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.section-checkbox:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.section-checkbox:focus:not(:checked) + label::before {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.listCompleted.disabled {
+  color: rgb(150, 150, 150);
+  background-color: rgb(235, 235, 235);
+  border-left: 1px solid rgb(215, 215, 215);
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+.createTodoButton {
+  margin-top: auto;
+  border: 0;
+  height: 40px;
+  background-color: rgba(77, 109, 233, 1);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  font-family: "Fira Sans";
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.popUp {
+  position: absolute;
+  top: 40%;
+  padding: 40px;
+  width: 600px;
+  height: auto;
+  min-height: 200px;
+  max-height: 600px;
+  background: #fff;
+  border-radius: 1rem;
+}
+
+.grey-background {
+  position: absolute;
+  width: 100%;
+  max-height: 1500px;
+  height: 100vh;
+  background: #000;
+  opacity: 0.3;
+}

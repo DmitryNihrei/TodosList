@@ -173,7 +173,7 @@ main {
 .popUp {
   position: absolute;
   top: 40%;
-  padding: 40px;
+  padding: 20px;
   width: 600px;
   height: auto;
   min-height: 200px;
@@ -189,4 +189,32 @@ main {
   height: 100vh;
   background: #000;
   opacity: 0.3;
+}
+
+.modalInput {
+  width: 100%;
+  border: 0;
+  padding: 19px 0px 19px 19px;
+  color: #1e1e1e;
+  background: #fdfdfd;
+  line-height: 1;
+  margin-bottom: 8px;
+  font-family: "Fira Sans";
+  max-width: 560px;
+  min-height: 50px;
+  resize: none;
+}
+
+.modalInput:focus {
+  outline: 0;
+  background: #f5f5f5;
+}
+
+.modalInput::placeholder {
+  color: #1e1e1e;
+  opacity: 1;
+}
+
+.modalInput::-webkit-scrollbar {
+  width: 0;
 }
